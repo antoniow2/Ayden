@@ -1,0 +1,15 @@
+.header {
+display: 'flex';
+justify-content: space-between;
+font-family: 'cursive';
+}
+
+.left {
+text-align: left;
+font-family: 'cursive';
+}
+
+.right {
+text-align: right;
+  font-family: 'cursive';
+}
