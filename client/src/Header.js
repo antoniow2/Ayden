@@ -14,7 +14,7 @@ function Home() {
   );
 }
 
-function RecipeGenerator() {
+function Recipe() {
   return (
     <Link to="/RecipeGenerator">
       <button style={{ fontFamily: "cursive", fontSize: "25px" }}>
