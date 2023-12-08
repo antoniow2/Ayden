@@ -1,47 +1,45 @@
 import "./Header.css";
 import PriceComp from "./Comparer";
 import Profile from "./Profile";
-import Recipes from "./Recipes";
+import RecipeGenerator from "./RecipeGenerator";
 import Dietary from "./DietaryRestrictions";
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
-return (
+  return (
     <a href="/home">
-    <button style={{fontFamily: 'cursive',fontSize: '25px'}}>
-        Home
-    </button>
+      <button style={{ fontFamily: "cursive", fontSize: "25px" }}>Home</button>
     </a>
-    );
+  );
 }
 
-function Recipe() {
-return (
-    <Link to="/recipes">
-    <button style={{fontFamily: 'cursive',fontSize: '25px'}}>
+function RecipeGenerator() {
+  return (
+    <Link to="/RecipeGenerator">
+      <button style={{ fontFamily: "cursive", fontSize: "25px" }}>
         Recipe Generator
-    </button>
+      </button>
     </Link>
-    );
+  );
 }
 function Price() {
-return (
+  return (
     <Link to="/pricecompare">
-    <button style={{fontFamily: 'cursive',fontSize: '25px'}}>
+      <button style={{ fontFamily: "cursive", fontSize: "25px" }}>
         Price Comparator
-    </button>
+      </button>
     </Link>
-    );
+  );
 }
 function Prof() {
-return (
+  return (
     <Link to="/profile">
-    <button style={{fontFamily: 'cursive',fontSize: '25px'}}>
+      <button style={{ fontFamily: "cursive", fontSize: "25px" }}>
         Profile
-    </button>
+      </button>
     </Link>
-    );
+  );
 }
 function Diet() {
   return (
@@ -54,24 +52,29 @@ function Diet() {
 }
 
 function Header() {
-    return (
-      <header style={{background: 'lemonchiffon',fontFamily:'cursive',}} className="header">
-        <nav>
-          <ul className="right">
-            <div style={{fontFamily:'cursive', fontSize: '30px'}} className="left">WhatToCook</div>
-            <Home/>
-            <Recipe/>
-            <Price/>
-            <Diet/>
-            <Prof/>
-          </ul>
-        </nav> 
-        <ul style={{color: 'lemonchiffon', fontSize: '15px'}}>
-          Space
+  return (
+    <header
+      style={{ background: "lemonchiffon", fontFamily: "cursive" }}
+      className="header"
+    >
+      <nav>
+        <ul className="right">
+          <div
+            style={{ fontFamily: "cursive", fontSize: "30px" }}
+            className="left"
+          >
+            WhatToCook
+          </div>
+          <Home />
+          <Recipe />
+          <Price />
+          <Diet />
+          <Prof />
         </ul>
-      </header>
-    );
-  }
+      </nav>
+      <ul style={{ color: "lemonchiffon", fontSize: "15px" }}>Space</ul>
+    </header>
+  );
+}
 
 export default Header;
-  
