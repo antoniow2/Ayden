@@ -110,7 +110,8 @@ const DietaryRestrictions = () => {
               {label}
             </label>
           </div>
-        ))} //sjashj
+        ))}{" "}
+        //sjashj
       </form>
       <button type="button" onClick={handleSaveRestrictions}>
         Save Dietary Restrictions
