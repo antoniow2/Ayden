@@ -97,7 +97,7 @@ const DietaryRestrictions = () => {
       <Header />
       <h1>Dietary Restrictions</h1>
       <form>
-        // <h3>Select your allergy:</h3>
+        // <h3>Select your allerg:</h3>
         {healthLabels.map((label) => (
           <div key={label}>
             <label>
