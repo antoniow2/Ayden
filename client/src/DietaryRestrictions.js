@@ -72,7 +72,7 @@ const DietaryRestrictions = () => {
   };
 
   useEffect(() => {
-    // Fetch user's saved dietary restrictions
+    Fetch user's saved dietary restrictions
     Axios.get(
       "https://systembreakerswhat-a8b3a7e03d39.herokuapp.com/users/user_healthlabels",
       {
