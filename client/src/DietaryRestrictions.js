@@ -72,7 +72,6 @@ const DietaryRestrictions = () => {
   };
 
   useEffect(() => {
-    Fetch user's saved dietary restrictions
     Axios.get(
       "https://systembreakerswhat-a8b3a7e03d39.herokuapp.com/users/user_healthlabels",
       {
@@ -98,7 +97,7 @@ const DietaryRestrictions = () => {
       <Header />
       <h1>Dietary Restrictions</h1>
       <form>
-       // <h3>Select your allergy:</h3> {"Select your allergy"}
+        // <h3>Select your allergy:</h3>
         {healthLabels.map((label) => (
           <div key={label}>
             <label>
