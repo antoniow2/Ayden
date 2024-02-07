@@ -93,25 +93,48 @@ const DietaryRestrictions = () => {
       });
   }, []);
 
+  // Separate labels into allergies and diets
+  const allergies = healthLabels.filter(label => label.toLowerCase().includes('free'));
+  const diets = healthLabels.filter(label => !label.toLowerCase().includes('free'));
+
   return (
     <div>
       <Header />
       <h1>Dietary Restrictions</h1>
       <form>
         <h3>Select your dietary restrictions:</h3>
-        {healthLabels.map((label) => (
-          <div key={label}>
-            <label>
-              <input
-                type="checkbox"
-                value={label}
-                checked={selectedRestrictions.includes(label)}
-                onChange={() => handleCheckboxChange(label)}
-              />
-              {label}
-            </label>
-          </div>
-        ))}
+        <div>
+          <h4>Allergies</h4>
+          {allergies.map((label) => (
+            <div key={label}>
+              <label>
+                <input
+                  type="checkbox"
+                  value={label}
+                  checked={selectedRestrictions.includes(label)}
+                  onChange={() => handleCheckboxChange(label)}
+                />
+                {label}
+              </label>
+            </div>
+          ))}
+        </div>
+        <div>
+          <h4>Diets</h4>
+          {diets.map((label) => (
+            <div key={label}>
+              <label>
+                <input
+                  type="checkbox"
+                  value={label}
+                  checked={selectedRestrictions.includes(label)}
+                  onChange={() => handleCheckboxChange(label)}
+                />
+                {label}
+              </label>
+            </div>
+          ))}
+        </div>
       </form>
       <button type="button" onClick={handleSaveRestrictions}>
         Save Dietary Restrictions
