@@ -95,9 +95,9 @@ const DietaryRestrictions = () => {
   return (
     <div>
       <Header />
-      <h1>Dietary Restrictions</h1>
+      <h1>Restrictions</h1>
       <form>
-        // <h3>Select your allerg:</h3>
+        // <h3>Select your allergy :</h3>
         {healthLabels.map((label) => (
           <div key={label}>
             <label>
@@ -111,7 +111,6 @@ const DietaryRestrictions = () => {
             </label>
           </div>
         ))}{" "}
-        //sjashj
       </form>
       <button type="button" onClick={handleSaveRestrictions}>
         Save Dietary Restrictions
